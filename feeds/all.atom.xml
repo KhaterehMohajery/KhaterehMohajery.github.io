@@ -1,3 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>kmohajery_blog</title><link href="https://KhaterehMohajery.github.io/" rel="alternate"></link><link href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" rel="self"></link><id>https://KhaterehMohajery.github.io/</id><updated>2016-12-23T10:20:00+01:00</updated><entry><title>My Third Entry-</title><link href="https://KhaterehMohajery.github.io/my-third-entry-.html" rel="alternate"></link><published>2016-12-23T10:20:00+01:00</published><updated>2016-12-23T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2016-12-23:my-third-entry-.html</id><summary type="html">&lt;p&gt;Just testing how to add material to my webpage&lt;/p&gt;</summary></entry><entry><title>My First Entry-checked</title><link href="https://KhaterehMohajery.github.io/my-first-entry-checked.html" rel="alternate"></link><published>2016-12-22T10:20:00+01:00</published><updated>2016-12-22T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2016-12-22:my-first-entry-checked.html</id><summary type="html">&lt;p&gt;This is the first entry  I am putting in my blog.  I am so excited to start a path to become a data scientist. For a while I was doubtful of what I want to do with my life. But now that I started learning more about data, its usage and implications and the statistical and programming tools to be able to efficiently handle and work with data, I think I finally found something that I really like to do and enjoy. 
-Stay tuned to my next post where I will share some of cool stuff I learnt during few weeks of doing GA data immersive program.&lt;/p&gt;</summary></entry><entry><title>My Second Entry-</title><link href="https://KhaterehMohajery.github.io/my-second-entry-.html" rel="alternate"></link><published>2016-12-22T10:20:00+01:00</published><updated>2016-12-22T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2016-12-22:my-second-entry-.html</id><summary type="html">&lt;p&gt;Just testing how to add material to my webpage&lt;/p&gt;</summary></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>kmohajery_blog</title><link href="https://KhaterehMohajery.github.io/" rel="alternate"></link><link href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" rel="self"></link><id>https://KhaterehMohajery.github.io/</id><updated>2017-02-08T10:20:00+01:00</updated><entry><title>Virtual Environment</title><link href="https://KhaterehMohajery.github.io/virtual-environment.html" rel="alternate"></link><published>2017-02-08T10:20:00+01:00</published><updated>2017-02-08T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2017-02-08:virtual-environment.html</id><summary type="html">&lt;p&gt;Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
+Install virtualenv using pip:&lt;/p&gt;
+&lt;p&gt;$ pip install virtualenv&lt;/p&gt;
+&lt;p&gt;Create a virtual environment for this specific project you are working on:&lt;/p&gt;
+&lt;p&gt;$ cd project_folder
+$ virtualenv venv&lt;/p&gt;
+&lt;p&gt;virtualenv venv creates a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages. The name of the environment (venv in this case) can be anything.
+This creates a copy of Python in the folder that you created for virtual environment. You can also use your version of choice for Python (like python 2.7).&lt;/p&gt;
+&lt;p&gt;$ virtualenv -p /usr/bin/python2.7 venv&lt;/p&gt;
+&lt;p&gt;To activate the virtual environment, try:&lt;/p&gt;
+&lt;p&gt;$ source venv/bin/activate&lt;/p&gt;
+&lt;p&gt;and when done working with it type:&lt;/p&gt;
+&lt;p&gt;$ deactivate
+In order to install packages you can use:&lt;/p&gt;
+&lt;p&gt;$ pip install requests&lt;/p&gt;
+&lt;p&gt;Also note running virtualenv with the option --no-site-packages will not include the packages that are installed globally which gives you the flexibility to use your required version of packages.&lt;/p&gt;</summary></entry><entry><title>Regular Expression</title><link href="https://KhaterehMohajery.github.io/regular-expression.html" rel="alternate"></link><published>2017-01-08T10:20:00+01:00</published><updated>2017-01-08T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2017-01-08:regular-expression.html</id><summary type="html">&lt;p&gt;Regular Expressions are among the most amazing and helpful things you can have specially when you are working with text data. It is much easier to find patterns, groups or specific characters using regular expression (aka regex).
+There are few ones that are specially very helpful:
+such as:
+\d  any digit
+\D Any Non-digit character
++ one or more repetition 
+[abc] Only a, b, or c
+[^abc] Not a, b nor c
+\w  Any Alphanumeric character
+\W  Any Non-alphanumeric character
+\s Any whitespace
+\S any Non-whitespace 
+^ $ starts and ends
+? optional character 
+some example :
+\d+ gives you any numbers (integers)
+ab?c matches either the strings "abc" or "ac" because the b is considered optional
+^Hello matches each line that starts with Hello
+bye$  matches each line that end with bye
+'^\W+|\W+$' gets rid of punctuations
+Use regular expressions with split, replace, stripe methods on strings in pandas and you can easily deal with your messy text data!&lt;/p&gt;</summary></entry><entry><title>SAT scores and trends across US states in 2001</title><link href="https://KhaterehMohajery.github.io/sat-scores-and-trends-across-us-states-in-2001.html" rel="alternate"></link><published>2017-01-02T10:20:00+01:00</published><updated>2017-01-02T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2017-01-02:sat-scores-and-trends-across-us-states-in-2001.html</id><summary type="html">&lt;h1&gt;SAT scores and trends across US states in 2001&lt;/h1&gt;
+&lt;h3&gt;I was working with a small data set of SAT scores and rates of participation across states in 2001 and found some interesting insights.&lt;/h3&gt;
+&lt;h3&gt;The dataset contained four columns (variables) and 52 rows (observations) including 50 states, DC and an entry called All which assumed to be some kind of population weighted average of the scores and rates among all states.&lt;/h3&gt;
+&lt;h2&gt;Investigating the data.&lt;/h2&gt;
+&lt;h3&gt;Using few pandas commands,&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+ &lt;span class="n"&gt;State&lt;/span&gt;  &lt;span class="n"&gt;Rate&lt;/span&gt;  &lt;span class="n"&gt;Verbal&lt;/span&gt;  &lt;span class="n"&gt;Math&lt;/span&gt;
+&lt;span class="mi"&gt;47&lt;/span&gt;    &lt;span class="n"&gt;IA&lt;/span&gt;     &lt;span class="mi"&gt;5&lt;/span&gt;     &lt;span class="mi"&gt;593&lt;/span&gt;   &lt;span class="mi"&gt;603&lt;/span&gt;
+&lt;span class="mi"&gt;48&lt;/span&gt;    &lt;span class="n"&gt;SD&lt;/span&gt;     &lt;span class="mi"&gt;4&lt;/span&gt;     &lt;span class="mi"&gt;577&lt;/span&gt;   &lt;span class="mi"&gt;582&lt;/span&gt;
+&lt;span class="mi"&gt;49&lt;/span&gt;    &lt;span class="n"&gt;ND&lt;/span&gt;     &lt;span class="mi"&gt;4&lt;/span&gt;     &lt;span class="mi"&gt;592&lt;/span&gt;   &lt;span class="mi"&gt;599&lt;/span&gt;
+&lt;span class="mi"&gt;50&lt;/span&gt;    &lt;span class="n"&gt;MS&lt;/span&gt;     &lt;span class="mi"&gt;4&lt;/span&gt;     &lt;span class="mi"&gt;566&lt;/span&gt;   &lt;span class="mi"&gt;551&lt;/span&gt;
+&lt;span class="mi"&gt;51&lt;/span&gt;   &lt;span class="n"&gt;All&lt;/span&gt;    &lt;span class="mi"&gt;45&lt;/span&gt;     &lt;span class="mi"&gt;506&lt;/span&gt;   &lt;span class="mi"&gt;514&lt;/span&gt;
+  &lt;span class="n"&gt;State&lt;/span&gt;  &lt;span class="n"&gt;Rate&lt;/span&gt;  &lt;span class="n"&gt;Verbal&lt;/span&gt;  &lt;span class="n"&gt;Math&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="n"&gt;CT&lt;/span&gt;    &lt;span class="mi"&gt;82&lt;/span&gt;     &lt;span class="mi"&gt;509&lt;/span&gt;   &lt;span class="mi"&gt;510&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="n"&gt;NJ&lt;/span&gt;    &lt;span class="mi"&gt;81&lt;/span&gt;     &lt;span class="mi"&gt;499&lt;/span&gt;   &lt;span class="mi"&gt;513&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="n"&gt;MA&lt;/span&gt;    &lt;span class="mi"&gt;79&lt;/span&gt;     &lt;span class="mi"&gt;511&lt;/span&gt;   &lt;span class="mi"&gt;515&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;    &lt;span class="n"&gt;NY&lt;/span&gt;    &lt;span class="mi"&gt;77&lt;/span&gt;     &lt;span class="mi"&gt;495&lt;/span&gt;   &lt;span class="mi"&gt;505&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;    &lt;span class="n"&gt;NH&lt;/span&gt;    &lt;span class="mi"&gt;72&lt;/span&gt;     &lt;span class="mi"&gt;520&lt;/span&gt;   &lt;span class="mi"&gt;516&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;52&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+    &lt;span class="n"&gt;Rate&lt;/span&gt;    &lt;span class="n"&gt;Verbal&lt;/span&gt;  &lt;span class="n"&gt;Math&lt;/span&gt;
+&lt;span class="n"&gt;count&lt;/span&gt;   &lt;span class="mf"&gt;52.000000&lt;/span&gt;   &lt;span class="mf"&gt;52.000000&lt;/span&gt;   &lt;span class="mf"&gt;52.000000&lt;/span&gt;
+&lt;span class="n"&gt;mean&lt;/span&gt;    &lt;span class="mf"&gt;37.153846&lt;/span&gt;   &lt;span class="mf"&gt;532.019231&lt;/span&gt;  &lt;span class="mf"&gt;531.500000&lt;/span&gt;
+&lt;span class="n"&gt;std&lt;/span&gt; &lt;span class="mf"&gt;27.301788&lt;/span&gt;   &lt;span class="mf"&gt;33.236225&lt;/span&gt;   &lt;span class="mf"&gt;36.014975&lt;/span&gt;
+&lt;span class="nb"&gt;min&lt;/span&gt; &lt;span class="mf"&gt;4.000000&lt;/span&gt;    &lt;span class="mf"&gt;482.000000&lt;/span&gt;  &lt;span class="mf"&gt;439.000000&lt;/span&gt;
+&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mf"&gt;9.000000&lt;/span&gt;    &lt;span class="mf"&gt;501.000000&lt;/span&gt;  &lt;span class="mf"&gt;504.000000&lt;/span&gt;
+&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mf"&gt;33.500000&lt;/span&gt;   &lt;span class="mf"&gt;526.500000&lt;/span&gt;  &lt;span class="mf"&gt;521.000000&lt;/span&gt;
+&lt;span class="mi"&gt;75&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mf"&gt;63.500000&lt;/span&gt;   &lt;span class="mf"&gt;562.000000&lt;/span&gt;  &lt;span class="mf"&gt;555.750000&lt;/span&gt;
+&lt;span class="nb"&gt;max&lt;/span&gt; &lt;span class="mf"&gt;82.000000&lt;/span&gt;   &lt;span class="mf"&gt;593.000000&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnull&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="n"&gt;State&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Rate&lt;/span&gt;      &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Verbal&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Math&lt;/span&gt;      &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;int64&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;First According to http://nces.ed.gov/programs/digest/d14/tables/dt14_226.40.asp?current=yes the Math score for Ohio State should be corrected from 439 to 539.&lt;/h3&gt;
+&lt;h3&gt;The data has the inforamation on the verbal and math average scores along with the participation rate in the SAT exam in all 50 states plus District of Columbia in 2001. It also has the average of these values for the whole country as a row. The data has 52 rows and 4 column. No null entry and the max, min and averages are in correct ranges.&lt;/h3&gt;
+&lt;h2&gt;Data Visualization&lt;/h2&gt;
+&lt;h3&gt;The histograms of the columns&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Ratefig" src="Ratehist.png" /&gt;
+&lt;img alt="Mathfig" src="Mathhist.png" /&gt;
+&lt;img alt="Verbalfig" src="Verbalhist.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;The Matrix plot of the columns&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Matrix" src="Matrix.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;The box plots of Math, Verbal and Rate values&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="boxplot" src="boxplot.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;The link to the Tableau&lt;/h3&gt;
+&lt;h3&gt;https://public.tableau.com/profile/publish/HeatMapofSATScoreacrossUS/Dashboard1#!/publish-confirm&lt;/h3&gt;
+&lt;h2&gt;Interesting insight&lt;/h2&gt;
+&lt;h3&gt;It was expected to have normally distributed histograms for scores. However, above histograms are in bimodal shape suggesting that two distinct populations are present in the dataset. The inverse correlation of scores and participation rates also helped with understanding of what is going on. Separating the states based on whether the SAT test is mandatory or not matched very well with high participation rates and low participation rates. This separation indicates that in states where the test is mandatory the participation rates are higher. However, since all students take the test the average scores are lower. In states where the test is not mandatory the participation rates are lower but because only high achiever and motivated students take the test to have the option to go to the best colleges anywhere in US, the scores are higher.&lt;/h3&gt;</summary></entry><entry><title>Why Python?</title><link href="https://KhaterehMohajery.github.io/why-python.html" rel="alternate"></link><published>2016-12-27T10:20:00+01:00</published><updated>2016-12-27T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2016-12-27:why-python.html</id><summary type="html">&lt;p&gt;As I mentioned in my first blog post, I am going to write a short blog about one or two interesting thing I learned about data. Or, just a practical instruction on something I struggled to figure out and it might of help to others to know.
+In the first week of the program, we delved into python programming focusing on working with pandas library. It is amazing to realize how powerful this tool is and how easy it makes to work with the data. I am sure that once you get the hold of the it you never go back to work with Excel! yes, I said this! Along with the matplotlib and seaborn libraries for visualization and statistical libraries such as sklrean you can do almost anything with data. Like many others, I previously depended on Excel or Matlab to work with data.
+While Excel provides a user friendly visual interface, you are very limited on what you can do with data compare to pandas.
+While Matlab is very powerful in terms of mathematical functionality, there are few drawbacks to it. First of all it is not free as opposed to  Pyhton or R which are open source. And, the advanced mathematical packages are not cheap! Furthermore, some manipulations that can be done in one line of code in python pandas, require several for loops in Matlab. 
+As a final note, since R was developed by statisticians for the original purpose of working with data, it has very powerful statistical libraries and comparable capabilities in data manipulation with python. However, when it comes to programming language, python is definitely more powerful.
+And, if you decide to try pandas, do not worry! There are abundant tutorials and examples on the web in addition to self explanatory python pages that are available for each method or function in python. And, you can find the answer to almost any question you have on stackoverflow or other python pages. 
+Good Luck and enjoy python!&lt;/p&gt;</summary></entry><entry><title>My First Entry-checked</title><link href="https://KhaterehMohajery.github.io/my-first-entry-checked.html" rel="alternate"></link><published>2016-12-22T10:20:00+01:00</published><updated>2016-12-22T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2016-12-22:my-first-entry-checked.html</id><summary type="html">&lt;p&gt;This is the first entry  I am putting in my blog.  I am so excited to start a path to become a data scientist. For a while I was doubtful of what I want to do with my life. But now that I started learning more about data, its usage and implications and the statistical and programming tools to be able to efficiently handle and work with data, I think I finally found something that I really like to do and enjoy. 
+Stay tuned to my next post where I will share some of cool stuff I learnt during few weeks of doing General Assembly Data Immersive program.&lt;/p&gt;</summary></entry></feed>

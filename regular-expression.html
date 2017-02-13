@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>kmohajery_blog - Tags</title>
+        <title>Regular Expression</title>
         <link rel="stylesheet" href="https://KhaterehMohajery.github.io/theme/css/main.css" />
         <link href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="kmohajery_blog Atom Feed" />
 
@@ -16,16 +16,53 @@
                 <h1><a href="https://KhaterehMohajery.github.io/">kmohajery_blog </a></h1>
                 <nav><ul>
                     <li><a href="https://KhaterehMohajery.github.io/category/project.html">Project</a></li>
-                    <li><a href="https://KhaterehMohajery.github.io/category/review.html">Review</a></li>
+                    <li class="active"><a href="https://KhaterehMohajery.github.io/category/review.html">Review</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Tags for kmohajery_blog</h1>
-    <ul>
-    </ul>
-</section>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://KhaterehMohajery.github.io/regular-expression.html" rel="bookmark"
+           title="Permalink to Regular Expression">Regular Expression</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-08T10:20:00+01:00">
+                Published: Sun 08 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Regular Expressions are among the most amazing and helpful things you can have specially when you are working with text data. It is much easier to find patterns, groups or specific characters using regular expression (aka regex).
+There are few ones that are specially very helpful:
+such as:
+\d  any digit
+\D Any Non-digit character
++ one or more repetition 
+[abc] Only a, b, or c
+[^abc] Not a, b nor c
+\w  Any Alphanumeric character
+\W  Any Non-alphanumeric character
+\s Any whitespace
+\S any Non-whitespace 
+^ $ starts and ends
+? optional character 
+some example :
+\d+ gives you any numbers (integers)
+ab?c matches either the strings "abc" or "ac" because the b is considered optional
+^Hello matches each line that starts with Hello
+bye$  matches each line that end with bye
+'^\W+|\W+$' gets rid of punctuations
+Use regular expressions with split, replace, stripe methods on strings in pandas and you can easily deal with your messy text data!</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

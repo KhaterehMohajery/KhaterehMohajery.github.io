@@ -15,16 +15,17 @@
         <header id="banner" class="body">
                 <h1><a href="https://KhaterehMohajery.github.io/">kmohajery_blog </a></h1>
                 <nav><ul>
+                    <li><a href="https://KhaterehMohajery.github.io/category/project.html">Project</a></li>
                     <li class="active"><a href="https://KhaterehMohajery.github.io/category/review.html">Review</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://KhaterehMohajery.github.io/my-third-entry-.html">My Third Entry-</a></h1>
+                    <h1 class="entry-title"><a href="https://KhaterehMohajery.github.io/virtual-environment.html">Virtual Environment</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2016-12-23T10:20:00+01:00">
-                Published: Fri 23 December 2016
+        <abbr class="published" title="2017-02-08T10:20:00+01:00">
+                Published: Wed 08 February 2017
         </abbr>
 
         <address class="vcard author">
@@ -32,12 +33,75 @@
         </address>
 <p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
 
-</footer><!-- /.post-info --><p>Just testing how to add material to my webpage</p>                </article>
+</footer><!-- /.post-info --><p>Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
+Install virtualenv using pip:</p>
+<p>$ pip install virtualenv</p>
+<p>Create a virtual environment for this specific project you are working on:</p>
+<p>$ cd project_folder
+$ virtualenv venv</p>
+<p>virtualenv venv creates a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages. The name of the environment (venv in this case) can be anything.
+This creates a copy of Python in the folder that you created for virtual environment. You can also use your version of choice for Python (like python 2.7).</p>
+<p>$ virtualenv -p /usr/bin/python2.7 venv</p>
+<p>To activate the virtual environment, try:</p>
+<p>$ source venv/bin/activate</p>
+<p>and when done working with it type:</p>
+<p>$ deactivate
+In order to install packages you can use:</p>
+<p>$ pip install requests</p>
+<p>Also note running virtualenv with the option --no-site-packages will not include the packages that are installed globally which gives you the flexibility to use your required version of packages.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://KhaterehMohajery.github.io/regular-expression.html" rel="bookmark"
+                           title="Permalink to Regular Expression">Regular Expression</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-08T10:20:00+01:00">
+                Published: Sun 08 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Regular Expressions are among the most amazing and helpful things you can have specially when you are working with text data. It is much easier to find patterns, groups or specific characters using regular expression (aka regex).
+There are few ones that are specially very helpful:
+such as:
+\d  any ...</p>
+                <a class="readmore" href="https://KhaterehMohajery.github.io/regular-expression.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://KhaterehMohajery.github.io/why-python.html" rel="bookmark"
+                           title="Permalink to Why Python?">Why Python?</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-12-27T10:20:00+01:00">
+                Published: Tue 27 December 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>As I mentioned in my first blog post, I am going to write a short blog about one or two interesting thing I learned about data. Or, just a practical instruction on something I struggled to figure out and it might of help to others to know.
+In the first ...</p>
+                <a class="readmore" href="https://KhaterehMohajery.github.io/why-python.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -58,28 +122,6 @@
 
 </footer><!-- /.post-info -->                <p>This is the first entry  I am putting in my blog.  I am so excited to start a path to become a data scientist. For a while I was doubtful of what I want to do with my life. But now that I started learning more about data, its usage ...</p>
                 <a class="readmore" href="https://KhaterehMohajery.github.io/my-first-entry-checked.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://KhaterehMohajery.github.io/my-second-entry-.html" rel="bookmark"
-                           title="Permalink to My Second Entry-">My Second Entry-</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-12-22T10:20:00+01:00">
-                Published: Thu 22 December 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
-        </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
-
-</footer><!-- /.post-info -->                <p>Just testing how to add material to my webpage</p>
-                <a class="readmore" href="https://KhaterehMohajery.github.io/my-second-entry-.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
