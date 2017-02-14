@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Virtual Environment</title>
+        <title>Useful Tricks in Pandas</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -22,14 +22,14 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/virtual-environment.html" rel="bookmark"
-           title="Permalink to Virtual Environment">Virtual Environment</a></h1>
+        <a href="/useful-tricks-in-pandas.html" rel="bookmark"
+           title="Permalink to Useful Tricks in Pandas">Useful Tricks in Pandas</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2017-02-08T10:20:00+01:00">
-                Published: Wed 08 February 2017
+        <abbr class="published" title="2017-01-12T10:20:00+01:00">
+                Published: Thu 12 January 2017
         </abbr>
 
         <address class="vcard author">
@@ -37,22 +37,57 @@
         </address>
 <p>In <a href="/category/review.html">Review</a>.</p>
 
-</footer><!-- /.post-info -->      <p>Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
-Install virtualenv using pip:</p>
-<p>$ pip install virtualenv</p>
-<p>Create a virtual environment for this specific project you are working on:</p>
-<p>$ cd project_folder
-$ virtualenv venv</p>
-<p>virtualenv venv creates a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages. The name of the environment (venv in this case) can be anything.
-This creates a copy of Python in the folder that you created for virtual environment. You can also use your version of choice for Python (like python 2.7).</p>
-<p>$ virtualenv -p /usr/bin/python2.7 venv</p>
-<p>To activate the virtual environment, try:</p>
-<p>$ source venv/bin/activate</p>
-<p>and when done working with it type:</p>
-<p>$ deactivate
-In order to install packages you can use:</p>
-<p>$ pip install requests</p>
-<p>Also note running virtualenv with the option --no-site-packages will not include the packages that are installed globally which gives you the flexibility to use your required version of packages.</p>
+</footer><!-- /.post-info -->      <p>In this blog post I want to introduce some useful and handy pandas tricks that have made my life much easier in several occasions (I will add to this as I encounter a new useful method or trick). </p>
+<ul>
+<li>Getting all the unique values in a column of a dataframe by using:
+df.columnname.unique()</li>
+<li>
+<p>Getting the number of null values for the data frame or the number or proportion of null values for each column:
+df.isnull().sum()
+And for each column:
+df.columnname.isnull().sum()
+df.columnname.isnull().mean()</p>
+</li>
+<li>
+<p>Mapping trick:
+First you create a mapping dictionary:
+equiv = {“a”:1, “b”:2, “c”:3} 
+Then you map for example a column to it
+df = pd.DataFrame( {"A": [“a”, “b”, “c”]} ) 
+df["B"] = df["A"].map(equiv) 
+print(df) 
+  A B 
+0 a 1
+1 b 2 
+2 c 3</p>
+</li>
+<li>
+<p>Getting dummy variables for categorical variables and adding it to the same data frame in one step:
+data = {'name': ['Jason', 'Amy', 'Tina', 'Jason', 'Amy'], 
+'sex': ['male', 'female', 'female', 'male', 'female'],
+'age':[17,18,25,21,19]}
+df = pd.DataFrame(data, columns = ['name', 'sex'])</p>
+</li>
+</ul>
+<p>df = pd.concat([df, pd.get_dummies(df[['name',’sex]])], axis=1)</p>
+<ul>
+<li>Sometimes, you need to make categorical variables into integer categories. This can be done by using  Labelencoder from sklearn preprocessing library:</li>
+</ul>
+<p>from sklearn.preprocessing import LabelEncoder</p>
+<p>Applying on above data frame the column “sex” can be converted 0 for male and 1 for female:</p>
+<p>LabelEncoder().fit_transform(df.sex)</p>
+<ul>
+<li>For applying a condition on all values of a row, np.where can be used. For example:
+df.sex = np.where (df.sex.str.contains('fe') == True ,'Female', df.sex)</li>
+</ul>
+<p>Each row that contains string 'fe', it puts in 'Female'. Otherwise, it leaves it as is.</p>
+<ul>
+<li>If you need a new data frame after applying  groupby method, putting option as_index =False  results in returning a data frame:</li>
+</ul>
+<p>df = df.groupby('sex', as_index =False).age.mean()</p>
+<p>sex    age
+0 female 20.666667
+1 male   19.000000</p>
     </div><!-- /.entry-content -->
 
   </article>

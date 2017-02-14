@@ -3,8 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>kmohajery_blog</title>
-        <link rel="stylesheet" href="https://KhaterehMohajery.github.io/theme/css/main.css" />
-        <link href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="kmohajery_blog Atom Feed" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,25 +12,25 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://KhaterehMohajery.github.io/">kmohajery_blog </a></h1>
+                <h1><a href="/">kmohajery_blog </a></h1>
                 <nav><ul>
-                    <li><a href="https://KhaterehMohajery.github.io/category/project.html">Project</a></li>
-                    <li><a href="https://KhaterehMohajery.github.io/category/review.html">Review</a></li>
+                    <li><a href="/category/project.html">Project</a></li>
+                    <li><a href="/category/review.html">Review</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://KhaterehMohajery.github.io/virtual-environment.html">Virtual Environment</a></h1>
+                    <h1 class="entry-title"><a href="/virtual-environment.html">Virtual Environment</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-02-08T10:20:00+01:00">
                 Published: Wed 08 February 2017
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
         </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+<p>In <a href="/category/review.html">Review</a>.</p>
 
 </footer><!-- /.post-info --><p>Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
 Install virtualenv using pip:</p>
@@ -57,7 +56,54 @@ In order to install packages you can use:</p>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://KhaterehMohajery.github.io/regular-expression.html" rel="bookmark"
+                    <h1><a href="/useful-tricks-in-pandas.html" rel="bookmark"
+                           title="Permalink to Useful Tricks in Pandas">Useful Tricks in Pandas</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-12T10:20:00+01:00">
+                Published: Thu 12 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>In this blog post I want to introduce some useful and handy pandas tricks that have made my life much easier in several occasions (I will add to this as I encounter a new useful method or trick). </p>
+<ul>
+<li>Getting all the unique values in a column of a dataframe by ...</li></ul>
+                <a class="readmore" href="/useful-tricks-in-pandas.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/copy-in-python.html" rel="bookmark"
+                           title="Permalink to Copy in Python">Copy in Python</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-10T10:20:00+01:00">
+                Published: Tue 10 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>One thing that might be very helpful is to know that "Assignment statements in python do not copy objects, they create bindings between a target and an object". To make it clear what I mean by this, I provide an example. Assume you create a list called a:
+a = [1 ...</p>
+                <a class="readmore" href="/copy-in-python.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/regular-expression.html" rel="bookmark"
                            title="Permalink to Regular Expression">Regular Expression</a></h1>
                 </header>
 
@@ -68,21 +114,21 @@ In order to install packages you can use:</p>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
         </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+<p>In <a href="/category/review.html">Review</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Regular Expressions are among the most amazing and helpful things you can have specially when you are working with text data. It is much easier to find patterns, groups or specific characters using regular expression (aka regex).
 There are few ones that are specially very helpful:
 such as:
 \d  any ...</p>
-                <a class="readmore" href="https://KhaterehMohajery.github.io/regular-expression.html">read more</a>
+                <a class="readmore" href="/regular-expression.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://KhaterehMohajery.github.io/sat-scores-and-trends-across-us-states-in-2001.html" rel="bookmark"
+                    <h1><a href="/sat-scores-and-trends-across-us-states-in-2001.html" rel="bookmark"
                            title="Permalink to SAT scores and trends across US states in 2001">SAT scores and trends across US states in 2001</a></h1>
                 </header>
 
@@ -93,20 +139,20 @@ such as:
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
         </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/project.html">Project</a>.</p>
+<p>In <a href="/category/project.html">Project</a>.</p>
 
 </footer><!-- /.post-info -->                <h1>SAT scores and trends across US states in 2001</h1>
-<h3>I was working with a small data set of SAT scores and rates of participation across states in 2001 and found some interesting insights.</h3>
-<h3>The dataset contained four columns (variables) and 52 rows (observations) including 50 states, DC and an entry ...</h3>
-                <a class="readmore" href="https://KhaterehMohajery.github.io/sat-scores-and-trends-across-us-states-in-2001.html">read more</a>
+<p>I was working with a small data set of SAT scores and rates of participation across states in 2001 and found some interesting insights.</p>
+<p>The dataset contained four columns (variables) and 52 rows (observations) including 50 states, DC and an entry ...</p>
+                <a class="readmore" href="/sat-scores-and-trends-across-us-states-in-2001.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://KhaterehMohajery.github.io/why-python.html" rel="bookmark"
+                    <h1><a href="/why-python.html" rel="bookmark"
                            title="Permalink to Why Python?">Why Python?</a></h1>
                 </header>
 
@@ -117,19 +163,19 @@ such as:
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
         </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+<p>In <a href="/category/review.html">Review</a>.</p>
 
 </footer><!-- /.post-info -->                <p>As I mentioned in my first blog post, I am going to write a short blog about one or two interesting thing I learned about data. Or, just a practical instruction on something I struggled to figure out and it might of help to others to know.
 In the first ...</p>
-                <a class="readmore" href="https://KhaterehMohajery.github.io/why-python.html">read more</a>
+                <a class="readmore" href="/why-python.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://KhaterehMohajery.github.io/my-first-entry-checked.html" rel="bookmark"
+                    <h1><a href="/my-first-entry-checked.html" rel="bookmark"
                            title="Permalink to My First Entry-checked">My First Entry-checked</a></h1>
                 </header>
 
@@ -140,12 +186,12 @@ In the first ...</p>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
         </address>
-<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+<p>In <a href="/category/review.html">Review</a>.</p>
 
 </footer><!-- /.post-info -->                <p>This is the first entry  I am putting in my blog.  I am so excited to start a path to become a data scientist. For a while I was doubtful of what I want to do with my life. But now that I started learning more about data, its usage ...</p>
-                <a class="readmore" href="https://KhaterehMohajery.github.io/my-first-entry-checked.html">read more</a>
+                <a class="readmore" href="/my-first-entry-checked.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
@@ -163,7 +209,6 @@ In the first ...</p>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="#">You can add links in your config file</a></li>
                             <li><a href="#">Another social link</a></li>

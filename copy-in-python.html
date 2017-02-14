@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Virtual Environment</title>
+        <title>Copy in Python</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -22,14 +22,14 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/virtual-environment.html" rel="bookmark"
-           title="Permalink to Virtual Environment">Virtual Environment</a></h1>
+        <a href="/copy-in-python.html" rel="bookmark"
+           title="Permalink to Copy in Python">Copy in Python</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2017-02-08T10:20:00+01:00">
-                Published: Wed 08 February 2017
+        <abbr class="published" title="2017-01-10T10:20:00+01:00">
+                Published: Tue 10 January 2017
         </abbr>
 
         <address class="vcard author">
@@ -37,22 +37,21 @@
         </address>
 <p>In <a href="/category/review.html">Review</a>.</p>
 
-</footer><!-- /.post-info -->      <p>Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
-Install virtualenv using pip:</p>
-<p>$ pip install virtualenv</p>
-<p>Create a virtual environment for this specific project you are working on:</p>
-<p>$ cd project_folder
-$ virtualenv venv</p>
-<p>virtualenv venv creates a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages. The name of the environment (venv in this case) can be anything.
-This creates a copy of Python in the folder that you created for virtual environment. You can also use your version of choice for Python (like python 2.7).</p>
-<p>$ virtualenv -p /usr/bin/python2.7 venv</p>
-<p>To activate the virtual environment, try:</p>
-<p>$ source venv/bin/activate</p>
-<p>and when done working with it type:</p>
-<p>$ deactivate
-In order to install packages you can use:</p>
-<p>$ pip install requests</p>
-<p>Also note running virtualenv with the option --no-site-packages will not include the packages that are installed globally which gives you the flexibility to use your required version of packages.</p>
+</footer><!-- /.post-info -->      <p>One thing that might be very helpful is to know that "Assignment statements in python do not copy objects, they create bindings between a target and an object". To make it clear what I mean by this, I provide an example. Assume you create a list called a:
+a = [1,2,3,4]
+if you want to have a copy of it you can assign it to a new variable:
+b = a
+Now if you make a change to your variable a, you do not expect variable b be affected. However, this is not the case in python. So, for example if you append an entry to the list a, it will be added to b as well as follow:
+a.append(5)
+print b
+[1, 2, 3, 4, 5]  <br />
+This happens due to above mentioned fact that you didn’t copy the list referenced by a. You just created a new tag called b and attached it to the list a’s memory address. And a and b really do point to the same memory address. So, to assign a new memory address for the list you are copying, you should do:
+b = a [:] 
+or 
+b = copy.copy(a) 
+b = copy.deepcopy(a)
+First returns a shallow copy of a and second one returns a deep copy of a.</p>
+<p>The difference between shallow and deep copying is only relevant for objects that contain other objects (compound objects like lists or class instances)</p>
     </div><!-- /.entry-content -->
 
   </article>
