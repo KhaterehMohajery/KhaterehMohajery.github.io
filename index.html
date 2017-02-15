@@ -34,25 +34,66 @@
 
 </footer><!-- /.post-info --><p>Working on my Capstone project for the Data Science Immersive program at GA, I required to work with timeseries. Specifically, I needed to work with a library that was only available on a development version of statsmodel package. One thing I could do was to download the development version of statsmodel from github and set it up by running the setup.py to replace the current official statmodel version. However, this could mess up all the tested and working libraries and I did not want to risk that. So, instead I decided to make a virtual environment and set the version of python and libraries I needed in that environment without any interference with outside of that environment. To create a virtual environment follow these simple steps:
 Install virtualenv using pip:</p>
-<p>$ pip install virtualenv</p>
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</pre></div>
+
+
 <p>Create a virtual environment for this specific project you are working on:</p>
-<p>$ cd project_folder
-$ virtualenv venv</p>
+<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">project_folder</span>
+<span class="n">virtualenv</span> <span class="n">venv</span>
+</pre></div>
+
+
 <p>virtualenv venv creates a folder in the current directory which will contain the Python executable files, and a copy of the pip library which you can use to install other packages. The name of the environment (venv in this case) can be anything.
 This creates a copy of Python in the folder that you created for virtual environment. You can also use your version of choice for Python (like python 2.7).</p>
-<p>$ virtualenv -p /usr/bin/python2.7 venv</p>
+<div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span> <span class="n">venv</span>
+</pre></div>
+
+
 <p>To activate the virtual environment, try:</p>
-<p>$ source venv/bin/activate</p>
+<div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+
+
 <p>and when done working with it type:</p>
-<p>$ deactivate
-In order to install packages you can use:</p>
-<p>$ pip install requests</p>
+<div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+
+
+<p>In order to install packages you can use:</p>
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+
+
 <p>Also note running virtualenv with the option --no-site-packages will not include the packages that are installed globally which gives you the flexibility to use your required version of packages.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/introduction-to-plots-in-matplotlib.html" rel="bookmark"
+                           title="Permalink to Introduction to plots in matplotlib">Introduction to plots in matplotlib</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-15T10:20:00+01:00">
+                Published: Sun 15 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>While it is very easy to draw many types of previously defined figures using matplotlib, customizing figures and plotting several plots in a same figure can be tricky.
+Here, I want to go over some of the basics of how different layers of a figure connected to each other to ...</p>
+                <a class="readmore" href="/introduction-to-plots-in-matplotlib.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -72,8 +113,7 @@ In order to install packages you can use:</p>
 <p>In <a href="/category/review.html">Review</a>.</p>
 
 </footer><!-- /.post-info -->                <p>In this blog post I want to introduce some useful and handy pandas tricks that have made my life much easier in several occasions (I will add to this as I encounter a new useful method or trick). </p>
-<ul>
-<li>Getting all the unique values in a column of a dataframe by ...</li></ul>
+<p>1- Getting all the unique values in a column of a dataframe ...</p>
                 <a class="readmore" href="/useful-tricks-in-pandas.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -95,8 +135,8 @@ In order to install packages you can use:</p>
         </address>
 <p>In <a href="/category/review.html">Review</a>.</p>
 
-</footer><!-- /.post-info -->                <p>One thing that might be very helpful is to know that "Assignment statements in python do not copy objects, they create bindings between a target and an object". To make it clear what I mean by this, I provide an example. Assume you create a list called a:
-a = [1 ...</p>
+</footer><!-- /.post-info -->                <p>One thing that might be very helpful is to know that "Assignment statements in python do not copy objects, they create bindings between a target and an object". To make it clear what I mean by this, I provide an example. Assume you create a list called a:</p>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1 ...</span></pre></div>
                 <a class="readmore" href="/copy-in-python.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -120,8 +160,8 @@ a = [1 ...</p>
 
 </footer><!-- /.post-info -->                <p>Regular Expressions are among the most amazing and helpful things you can have specially when you are working with text data. It is much easier to find patterns, groups or specific characters using regular expression (aka regex).
 There are few ones that are specially very helpful:
-such as:
-\d  any ...</p>
+such as:</p>
+<p>\d  Any ...</p>
                 <a class="readmore" href="/regular-expression.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
