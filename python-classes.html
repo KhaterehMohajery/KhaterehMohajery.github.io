@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Python classes</title>
+        <link rel="stylesheet" href="https://KhaterehMohajery.github.io/theme/css/main.css" />
+        <link href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Khatereh Mohajery's blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://KhaterehMohajery.github.io/">Khatereh Mohajery's blog </a></h1>
+                <nav><ul>
+                    <li><a href="https://KhaterehMohajery.github.io/category/project.html">Project</a></li>
+                    <li class="active"><a href="https://KhaterehMohajery.github.io/category/review.html">Review</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://KhaterehMohajery.github.io/python-classes.html" rel="bookmark"
+           title="Permalink to Python classes">Python classes</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-23T10:20:00+01:00">
+                Published: Mon 23 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://KhaterehMohajery.github.io/author/khatereh-mohajery.html">Khatereh Mohajery</a>
+        </address>
+<p>In <a href="https://KhaterehMohajery.github.io/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->      <p>What is a python class? Before answering this question it might be useful to go over few definitions and concept to help with better understanding what python class is and why it is used.</p>
+<p>First, we need to define a programming object. What is an Object? In programming, basic elements of programs are called objects. In Python, strings, dictionaries, integers, lists and functions are all objects.This means they have certain things in common.</p>
+<p>Second, we go over procedural programming concept. Dividing a program into reusable chunks called procedures of functions. This maintains separation between the code and data and also makes it easier to visualize what the code is doing and to maintain the code. Another important function of procedural programming is to avoid repetition which makes programming a lot faster and efficient. </p>
+<p>Third concept is object oriented programming. Lots of operations are common to objects of the same type
+For example, in python string is an object. Standard operations on strings may include making a lowercase or uppercase version of a string or splitting it. Properties of objects in python are called methods. So, we can call
+In Python there is a blueprint string object called the string type. Its actual name is str. 
+In an object oriented language we can build these in as properties of the string object. 
+It has all the methods and properties associated with the string. Every time a new string is created, the blueprint is used to create a new object with all the properties of the blueprint.</p>
+<p>Now we get to define a python class. Whenever we create our own blueprints, these are called classes. 
+We can define our own class of object and from this create as many instances of this class as we want. 
+They will all have the methods (and other properties) from the blueprint - the class.
+Here we create a python class named Car.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wheels</span><span class="o">=</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span><span class="o">=</span> <span class="n">wheels</span>
+
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1">#calculating the price of the car</span>
+        <span class="n">pr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">*</span><span class="mi">4000</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;The price of this car is: $</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">pr</span> <span class="p">)</span>
+
+<span class="n">Mustang</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">Mustang</span><span class="o">.</span><span class="n">wheels</span>
+<span class="mi">4</span>
+<span class="k">print</span> <span class="n">Mustang</span><span class="o">.</span><span class="n">price</span><span class="p">()</span>
+<span class="n">The</span> <span class="n">price</span> <span class="n">of</span> <span class="n">this</span> <span class="n">car</span> <span class="ow">is</span><span class="p">:</span> <span class="err">$</span><span class="mi">16000</span>
+<span class="sb">````</span>
+
+<span class="n">the</span> <span class="bp">self</span> <span class="ow">is</span> <span class="n">referring</span> <span class="n">to</span> <span class="n">its</span> <span class="n">own</span> <span class="n">function</span> <span class="ow">or</span> <span class="n">variables</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">attach</span> <span class="n">functions</span> <span class="ow">and</span> <span class="n">variables</span> <span class="n">to</span> <span class="n">a</span> <span class="n">class</span><span class="o">.</span> <span class="n">The</span> <span class="n">initialization</span> <span class="ow">or</span> <span class="n">constructor</span> <span class="p">(</span><span class="n">__init__</span><span class="p">)</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">function</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">when</span> <span class="n">the</span> <span class="k">class</span> <span class="nc">is</span> <span class="n">created</span> <span class="ow">and</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">setup</span> <span class="n">work</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span> <span class="n">default</span> <span class="n">values</span> <span class="k">for</span> <span class="n">wheels</span> <span class="ow">in</span> <span class="n">Car</span> <span class="k">class</span> <span class="nc">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">be</span> <span class="mi">4</span> <span class="n">but</span> <span class="n">it</span> <span class="k">as</span> <span class="n">optional</span> <span class="nb">input</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">define</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">wheels</span> <span class="n">when</span> <span class="n">you</span> <span class="n">initiate</span> <span class="n">an</span> <span class="n">instace</span> <span class="n">of</span> <span class="n">this</span> <span class="n">class</span><span class="o">.</span> <span class="n">In</span> <span class="n">above</span> <span class="n">example</span> <span class="n">we</span> <span class="n">initiated</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">Car</span> <span class="k">class</span> <span class="nc">called</span> <span class="n">Mustang</span><span class="o">.</span> <span class="n">By</span> <span class="n">defualt</span><span class="p">,</span> <span class="n">it</span> <span class="n">has</span> <span class="mi">4</span> <span class="n">wheels</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="nb">apply</span> <span class="n">the</span> <span class="n">method</span> <span class="n">of</span> <span class="n">price</span> <span class="n">on</span> <span class="n">Mustang</span> <span class="n">car</span> <span class="n">you</span> <span class="n">get</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="mi">16000</span> <span class="k">as</span> <span class="n">its</span> <span class="n">price</span> <span class="n">since</span> <span class="n">the</span> <span class="n">function</span> <span class="n">price</span> <span class="ow">is</span> <span class="n">defined</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">car</span> <span class="k">class</span> <span class="nc">the</span> <span class="n">multiplies</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">wheels</span> <span class="n">by</span> <span class="mf">4000.</span> 
+<span class="n">In</span> <span class="n">case</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">define</span> <span class="n">another</span> <span class="n">number</span> <span class="n">of</span> <span class="n">wheels</span> <span class="k">for</span> <span class="n">your</span> <span class="n">car</span> <span class="n">you</span> <span class="n">can</span> <span class="n">add</span> <span class="n">it</span> <span class="k">as</span> <span class="n">an</span> <span class="nb">input</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="n">python</span>
+<span class="n">GMC</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">wheels</span> <span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">GMC</span><span class="o">.</span><span class="n">wheels</span>
+<span class="mi">6</span>
+<span class="n">GMC</span><span class="o">.</span><span class="n">price</span><span class="p">()</span>
+<span class="n">The</span> <span class="n">price</span> <span class="n">of</span> <span class="n">this</span> <span class="n">car</span> <span class="ow">is</span><span class="p">:</span> <span class="err">$</span><span class="mi">24000</span>
+</pre></div>
+
+
+<p>Classes can inherit data and properties from their parent class. For example the car class above can be a child of Vehicle class and can have properties in addition to the properties it inherited from vehicle class in a following manner:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Vehicle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">base_sale_price</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wheels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">=</span> <span class="n">wheels</span>
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_sale_price</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;The price of this car is: $</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">pr</span> <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wheels</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">=</span> <span class="n">wheels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_sale_price</span> <span class="o">=</span> <span class="mi">4000</span>
+
+<span class="n">GMC</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="mi">6</span>
+<span class="n">GMC</span><span class="o">.</span><span class="n">price</span><span class="p">()</span>
+<span class="n">The</span> <span class="n">price</span> <span class="n">of</span> <span class="n">this</span> <span class="n">car</span> <span class="ow">is</span><span class="p">:</span> <span class="err">$</span><span class="mi">24000</span>
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://KhaterehMohajery.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

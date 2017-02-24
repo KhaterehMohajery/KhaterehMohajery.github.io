@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>kmohajery_blog</title><link href="https://KhaterehMohajery.github.io/" rel="alternate"></link><link href="https://KhaterehMohajery.github.io/feeds/project.atom.xml" rel="self"></link><id>https://KhaterehMohajery.github.io/</id><updated>2017-01-02T10:20:00+01:00</updated><entry><title>SAT scores and trends across US states in 2001</title><link href="https://KhaterehMohajery.github.io/sat-scores-and-trends-across-us-states-in-2001.html" rel="alternate"></link><published>2017-01-02T10:20:00+01:00</published><updated>2017-01-02T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2017-01-02:sat-scores-and-trends-across-us-states-in-2001.html</id><summary type="html">&lt;h1&gt;SAT scores and trends across US states in 2001&lt;/h1&gt;
-&lt;h3&gt;I was working with a small data set of SAT scores and rates of participation across states in 2001 and found some interesting insights.&lt;/h3&gt;
-&lt;h3&gt;The dataset contained four columns (variables) and 52 rows (observations) including 50 states, DC and an entry called All which assumed to be some kind of population weighted average of the scores and rates among all states.&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Khatereh Mohajery's blog</title><link href="https://KhaterehMohajery.github.io/" rel="alternate"></link><link href="https://KhaterehMohajery.github.io/feeds/project.atom.xml" rel="self"></link><id>https://KhaterehMohajery.github.io/</id><updated>2017-01-02T10:20:00+01:00</updated><entry><title>SAT scores and trends across US states in 2001</title><link href="https://KhaterehMohajery.github.io/sat-scores-and-trends-across-us-states-in-2001.html" rel="alternate"></link><published>2017-01-02T10:20:00+01:00</published><updated>2017-01-02T10:20:00+01:00</updated><author><name>Khatereh Mohajery</name></author><id>tag:KhaterehMohajery.github.io,2017-01-02:sat-scores-and-trends-across-us-states-in-2001.html</id><summary type="html">&lt;h1&gt;SAT scores and trends across US states in 2001&lt;/h1&gt;
+&lt;p&gt;I was working with a small data set of SAT scores and rates of participation across states in 2001 and found some interesting insights.&lt;/p&gt;
+&lt;p&gt;The dataset contained four columns (variables) and 52 rows (observations) including 50 states, DC and an entry called All which assumed to be some kind of population weighted average of the scores and rates among all states.&lt;/p&gt;
 &lt;h2&gt;Investigating the data.&lt;/h2&gt;
-&lt;h3&gt;Using few pandas commands,&lt;/h3&gt;
+&lt;p&gt;Using few pandas commands, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
  &lt;span class="n"&gt;State&lt;/span&gt;  &lt;span class="n"&gt;Rate&lt;/span&gt;  &lt;span class="n"&gt;Verbal&lt;/span&gt;  &lt;span class="n"&gt;Math&lt;/span&gt;
@@ -43,18 +43,25 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;First According to http://nces.ed.gov/programs/digest/d14/tables/dt14_226.40.asp?current=yes the Math score for Ohio State should be corrected from 439 to 539.&lt;/h3&gt;
-&lt;h3&gt;The data has the inforamation on the verbal and math average scores along with the participation rate in the SAT exam in all 50 states plus District of Columbia in 2001. It also has the average of these values for the whole country as a row. The data has 52 rows and 4 column. No null entry and the max, min and averages are in correct ranges.&lt;/h3&gt;
+&lt;p&gt;First According to http://nces.ed.gov/programs/digest/d14/tables/dt14_226.40.asp?current=yes the Math score for Ohio State should be corrected from 439 to 539.&lt;/p&gt;
+&lt;p&gt;The data has the inforamation on the verbal and math average scores along with the participation rate in the SAT exam in all 50 states plus District of Columbia in 2001. It also has the average of these values for the whole country as a row. The data has 52 rows and 4 column. No null entry and the max, min and averages are in correct ranges.&lt;/p&gt;
 &lt;h2&gt;Data Visualization&lt;/h2&gt;
 &lt;h3&gt;The histograms of the columns&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Ratefig" src="Ratehist.png" /&gt;
-&lt;img alt="Mathfig" src="Mathhist.png" /&gt;
-&lt;img alt="Verbalfig" src="Verbalhist.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Ratefig" src="images/Ratehist.png" /&gt;
+&lt;img alt="Mathfig" src="images/Mathhist.png" /&gt;
+&lt;img alt="Verbalfig" src="images/Verbalhist.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;The Matrix plot of the columns&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Matrix" src="Matrix.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;The box plots of Math, Verbal and Rate values&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="boxplot" src="boxplot.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;The link to the Tableau&lt;/h3&gt;
-&lt;h3&gt;https://public.tableau.com/profile/publish/HeatMapofSATScoreacrossUS/Dashboard1#!/publish-confirm&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Matrix" src="images/Matrix.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;The box plots of math and verbal scores&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="fig1" src="images/fig1.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Tableau&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;iframe&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;750&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;https://public.tableau.com/profile/khatereh.mohajery#!/vizhome/HeatMapofVerbalScoresonSATacrossUSin2001/Verbal&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;iframe&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;iframe width="100%" height="750" src="https://public.tableau.com/profile/khatereh.mohajery#!/vizhome/HeatMapofVerbalScoresonSATacrossUSin2001/Verbal"&gt;&lt;/iframe&gt;
+
 &lt;h2&gt;Interesting insight&lt;/h2&gt;
-&lt;h3&gt;It was expected to have normally distributed histograms for scores. However, above histograms are in bimodal shape suggesting that two distinct populations are present in the dataset. The inverse correlation of scores and participation rates also helped with understanding of what is going on. Separating the states based on whether the SAT test is mandatory or not matched very well with high participation rates and low participation rates. This separation indicates that in states where the test is mandatory the participation rates are higher. However, since all students take the test the average scores are lower. In states where the test is not mandatory the participation rates are lower but because only high achiever and motivated students take the test to have the option to go to the best colleges anywhere in US, the scores are higher.&lt;/h3&gt;</summary></entry></feed>
+&lt;p&gt;It was expected to have normally distributed histograms for scores. However, above histograms are in bimodal shape suggesting that two distinct populations are present in the dataset. The inverse correlation of scores and participation rates also helped with understanding of what is going on. Separating the states based on whether the SAT test is mandatory or not matched very well with high participation rates and low participation rates. This separation indicates that in states where the test is mandatory the participation rates are higher. However, since all students take the test the average scores are lower. In states where the test is not mandatory the participation rates are lower but because only high achiever and motivated students take the test to have the option to go to the best colleges anywhere in US, the scores are higher.&lt;/p&gt;</summary></entry></feed>
